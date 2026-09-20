@@ -1,0 +1,16 @@
+{
+  "name": "atividade-04-playwright",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Testes funcionais de frete e cadastro de senha com Playwright",
+  "scripts": {
+    "start": "node server.js",
+    "test": "playwright test --project=chromium",
+    "test:all": "playwright test",
+    "browsers": "playwright install chromium",
+    "report": "playwright show-report"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.55.0"
+  }
+}
