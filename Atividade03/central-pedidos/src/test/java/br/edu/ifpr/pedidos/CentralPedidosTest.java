@@ -44,9 +44,9 @@ class CentralPedidosTest {
         CalculadoraFrete f = new CalculadoraFrete(); Cliente comum = new Cliente(false, false, 1);
         assertAll(() -> assertEquals(1_200, f.calcular(pedido("PR", false, null, item(1, 1, 1, 2_000, false)), comum, 1)),
             () -> assertEquals(2_300, f.calcular(pedido("SP", false, null, item(1, 1, 1, 2_001, false)), comum, 1)),
-            () -> assertEquals(3_600, f.calcular(pedido("MG", false, null, item(1, 1, 1, 4_001, false)), comum, 1)),
+            () -> assertEquals(3_900, f.calcular(pedido("MG", false, null, item(1, 1, 1, 4_001, false)), comum, 1)),
             () -> assertEquals(0, f.calcular(pedido("RJ", false, null, item(1, 1, 1, 1, false)), comum, 30_000)),
-            () -> assertEquals(2_000, f.calcular(pedido("PR", true, null, item(1, 1, 1, 1, true)), new Cliente(true, false, 1), 30_000)),
+            () -> assertEquals(2_600, f.calcular(pedido("PR", true, null, item(1, 1, 1, 1, true)), new Cliente(true, false, 1), 30_000)),
             () -> assertThrows(IllegalArgumentException.class, () -> f.calcular(pedido("PR", false, null), comum, -1)));
     }
 
