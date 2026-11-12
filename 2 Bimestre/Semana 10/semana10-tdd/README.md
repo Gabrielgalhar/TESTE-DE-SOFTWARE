@@ -37,11 +37,3 @@ Log completo: `evidencias/suite-completa.log`.
 | estoque-tdd | Estoque inicial 0, entrada, acúmulo, retirada, retirada maior que o estoque, entrada ≤ 0, retirada ≤ 0 | Operações inválidas são ignoradas, então o estoque nunca fica negativo |
 | carrinho-compras-tdd | Total vazio, adicionar, somar, remover, preço negativo, desconto de 10% a partir de R$ 500,00 | Preço negativo lança `IllegalArgumentException` no construtor de `Produto`. O desconto vale a partir de 500,00 e foi testado nas fronteiras 499,99 / 500,00 / 500,01 |
 
-## Evidências RED → GREEN
-
-O enunciado pede o ciclo TDD (teste falhando, implementação, teste passando). Para cada projeto, a pasta `evidencias/` guarda:
-
-- `<projeto>-RED.log`: execução dos testes com a **versão inicial incompleta** da classe (guardada na pasta `stubs/` de cada projeto). Os testes falham, o que mostra que eles detectam a ausência do comportamento.
-- `<projeto>-GREEN.log`: execução dos mesmos testes com a **implementação final**, todos passando.
-
-Os logs foram gerados pelo script `gerar_evidencias`, que alterna entre a versão inicial e a final e executa `mvn clean test` em cada uma.
