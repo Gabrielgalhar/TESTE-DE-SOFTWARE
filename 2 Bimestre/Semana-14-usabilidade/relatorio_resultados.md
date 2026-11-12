@@ -1,70 +1,149 @@
 # Relatório de Resultados — Teste de Usuário Final
 
-## 0. Fundamentação
-
-Segundo o material da disciplina, o **teste de usuário (ou de usuário final)** é a fase em que usuários reais, ou representantes deles, avaliam o software executando tarefas definidas em cenários de uso, e dão feedback direto sobre suas necessidades e expectativas. Ele se diferencia de outros testes vistos na disciplina:
-
-- **Teste de sistema:** avalia o software como um todo integrado, contra requisitos funcionais e não funcionais, em ambiente semelhante ao de produção.
-- **Teste de aceitação:** valida o software com usuários finais ou representantes dos stakeholders. Usuário não é o cliente: o cliente solicita e financia o sistema, e o usuário final é quem o utiliza.
-- **Teste A/B:** compara duas versões que diferem em uma única variável, com grupos aleatórios, medindo uma métrica como a taxa de conversão.
-- **Teste beta:** expõe o produto a usuários externos antes do lançamento oficial.
-- **Teste de regressão:** garante que mudanças não quebrem funcionalidades existentes.
-
-Neste trabalho foi aplicado um **teste de usuário final de usabilidade** no fluxo de busca, comparação e simulação de compra do Mercado Livre, com as métricas tempo de execução, taxa de sucesso, erros cometidos e satisfação (SUS).
+>  **Dados simulados.** Os valores deste relatório e dos arquivos em `dados/` são fictícios, criados para demonstrar o preenchimento da planilha, o cálculo das métricas e a análise. Eles não vêm de uma sessão real com participantes.
 
 ## 1. Identificação
 
-| Item | Valor |
+| **Item** | **Valor** |
 |---|---|
-| Aluno | Gabriel Galhardone Felipe — RA 24021292-2 — ESOFT6S-N |
-| Data da aplicação | <DD/MM/AAAA> |
-| Número de participantes | <N> (P1 a P<N>) |
-| Perfil dos participantes | <idade aproximada, usa o Mercado Livre com frequência? sim/não> |
-| Navegador | <Chrome / Firefox / Edge, janela anônima?> |
-| Avaliador | <nome> |
+| Tipo de dados | Simulados (exemplo) |
+| Número de participantes | 5 (P1 a P5) |
+| Navegador | Google Chrome, janela anônima |
+| Tarefas | T1 a T7 (versão `plano_de_teste.md`) |
+
+---
 
 ## 2. Resultados quantitativos
 
-Saída de `python analisar_resultados.py`:
+A análise foi realizada utilizando o script `analisar_resultados.py`.
+
+### Resultado das observações
 
 ```text
-<COLE AQUI A SAÍDA REAL DO SCRIPT>
+== Observações ==
+Participante   Tempo (s)  Carrinho   Ajuda
+P1                   114         S       N
+P2                   215         S       N
+P3                   133         S       N
+P4                   264         S       N
+P5                   163         S       N
 ```
 
-| Métrica | Resultado | Meta | Atingiu? |
-|---|---|---|---|
-| Taxa de sucesso (carrinho sem ajuda) | <x/N = %> | ≥ 90% | <sim/não> |
-| Tempo médio total | <s> | ≤ 240 s | <sim/não> |
-| Média SUS | <valor> | ≥ 68 | <sim/não> |
+Todos os cinco participantes conseguiram concluir o fluxo relacionado ao carrinho sem necessidade de ajuda.
 
-### Tempo e erros por tarefa
+### Erros por tarefa
 
-| Tarefa | Tempo médio (s) | Erros | Taxa de sucesso |
-|---|---|---|---|
-| T1 — Acessar site | | | |
-| T2 — Buscar produto | | | |
-| T3 — Aplicar filtros | | | |
-| T4 — Abrir detalhes | | | |
-| T5 — Adicionar ao carrinho | | | |
-| T6 — Simular compra | | | |
-| T7 — Retornar à tela inicial | | | |
+```text
+T1: 0
+T2: 5
+T3: 3
+T4: 1
+T5: 5
+T6: 0
+T7: 2
+```
 
-## 3. Problemas de usabilidade encontrados
+O total registrado foi de **16 erros** distribuídos entre as tarefas.
 
-Liste só o que você observou de verdade nas sessões.
+| **Métrica** | **Resultado** | **Meta** | **Atingiu?** |
+|---|---:|---:|---|
+| Taxa de sucesso (carrinho sem ajuda) | **100% (5/5)** | ≥ 90% |  Sim |
+| Tempo médio total | **178 s (3,0 min)** | ≤ 240 s |  Sim |
+| Total de erros | **16** | — | — |
+| Média SUS | **69,0 (Aceitável)** | ≥ 68 |  Sim |
 
-| # | Tarefa | Descrição do problema | Participantes afetados | Severidade (alta/média/baixa) |
-|---|---|---|---|---|
-| 1 | | | | |
+### Análise dos resultados
 
-## 4. Pontos positivos observados
+A taxa de sucesso foi de **100%**, ou seja, todos os cinco participantes conseguiram concluir o fluxo do carrinho sem precisar de ajuda. Esse resultado ficou acima da meta estabelecida de 90%.
 
-- <o que funcionou bem, com base nas observações e no think aloud>
+O tempo médio foi de **178 segundos**, equivalente a aproximadamente **3 minutos**. Como a meta definida era de até 240 segundos, o resultado também foi considerado satisfatório.
 
-## 5. Recomendações de melhoria
+Apesar dos resultados positivos, foram registrados **16 erros** ao longo das tarefas. A maior concentração ocorreu nas tarefas **T2 e T5**, ambas com 5 erros, seguidas pela T3, com 3 erros.
 
-1. <uma recomendação para cada problema da seção 3>
+---
 
-## 6. Conclusão
+## 3. Resultados do SUS
 
-<Diga se cada meta foi atingida (sucesso ≥ 90%, tempo ≤ 240 s, SUS ≥ 68), qual foi o principal gargalo e o que melhoraria primeiro.>
+O questionário SUS apresentou os seguintes resultados:
+
+| **Participante** | **Pontuação SUS** | **Classificação** |
+|---|---:|---|
+| P1 | 80,0 | Bom |
+| P2 | 57,5 | Ruim / marginal |
+| P3 | 95,0 | Excelente |
+| P4 | 37,5 | Inaceitável |
+| P5 | 75,0 | Bom |
+| **Média** | **69,0** | **Aceitável** |
+
+A média geral do SUS foi de **69,0 pontos**, sendo classificada como **Aceitável**.
+
+Os resultados individuais mostram uma variação considerável entre os participantes. Enquanto P3 apresentou uma avaliação excelente, com 95 pontos, P4 apresentou 37,5 pontos, classificado como inaceitável. P2 também apresentou uma avaliação abaixo do esperado, com 57,5 pontos.
+
+Isso indica que, apesar de o fluxo ter sido concluído com sucesso pelos participantes, a experiência de uso não foi percebida da mesma maneira por todos.
+
+---
+
+## 4. Principais problemas de usabilidade encontrados
+
+Com base nos erros registrados durante a execução das tarefas, foram identificados os seguintes pontos de atenção:
+
+| **#** | **Tarefa** | **Descrição do problema** | **Quantidade de erros** | **Severidade** |
+|---:|---|---|---:|---|
+| 1 | T2 | Dificuldades ou enganos durante a busca e identificação dos produtos. | 5 | Média |
+| 2 | T5 | Dificuldades ou cliques incorretos durante o processo de adição do produto ao carrinho. | 5 | Alta |
+| 3 | T3 | Dificuldades relacionadas à aplicação ou identificação de filtros. | 3 | Média |
+| 4 | T7 | Dificuldades para retornar à tela inicial. | 2 | Baixa |
+| 5 | T4 | Ocorrência de erro durante a execução da tarefa. | 1 | Baixa |
+
+As tarefas **T2 e T5** concentraram a maior quantidade de erros, com cinco ocorrências cada. Portanto, essas etapas merecem atenção especial em futuras melhorias da interface.
+
+A tarefa **T3**, com três erros, também apresentou dificuldades relacionadas à localização e utilização de recursos da interface.
+
+---
+
+## 5. Pontos positivos
+
+Os resultados também demonstraram diversos aspectos positivos na utilização do sistema:
+
+- **100% dos participantes** conseguiram concluir o fluxo do carrinho sem ajuda.
+- O **tempo médio de 178 segundos** ficou abaixo da meta de 240 segundos.
+- As tarefas **T1 e T6 não apresentaram erros**, indicando facilidade na execução dessas etapas.
+- A maioria dos participantes conseguiu concluir as tarefas propostas.
+- A média SUS de **69,0** colocou a usabilidade geral do sistema na classificação **Aceitável**.
+- Dois participantes apresentaram avaliações positivas de usabilidade, com pontuações de 80 e 75 pontos.
+
+---
+
+## 6. Recomendações de melhoria
+
+Com base nos resultados encontrados, são recomendadas as seguintes melhorias:
+
+1. **Melhorar a experiência de busca de produtos**, tornando os resultados mais claros e reduzindo a possibilidade de o usuário selecionar uma opção incorreta.
+
+2. **Diferenciar melhor as opções relacionadas ao carrinho**, principalmente os elementos envolvidos na ação de adicionar um produto, evitando cliques incorretos.
+
+3. **Facilitar a localização dos filtros**, utilizando elementos visuais mais destacados e uma organização mais intuitiva.
+
+4. **Melhorar a navegação de retorno**, deixando mais evidente como o usuário pode retornar à tela inicial.
+
+5. **Revisar as etapas que apresentaram maior quantidade de erros**, principalmente T2 e T5.
+
+6. **Realizar novos testes de usabilidade**, principalmente porque os resultados do SUS apresentaram grande diferença entre os participantes.
+
+7. **Investigar a experiência dos usuários com pontuação SUS mais baixa**, buscando identificar quais elementos da interface causaram maior dificuldade ou insatisfação.
+
+---
+
+## 7. Conclusão
+
+Com base nos dados simulados analisados, o teste de usabilidade apresentou **resultados positivos em relação à conclusão das tarefas e ao tempo de execução**.
+
+A taxa de sucesso foi de **100% (5/5)**, superando a meta estabelecida de 90%. Isso demonstra que todos os participantes conseguiram concluir o fluxo do carrinho sem precisar de ajuda.
+
+O tempo médio também apresentou um resultado satisfatório, com **178 segundos (3,0 minutos)**, ficando abaixo da meta de 240 segundos.
+
+Por outro lado, foram identificados **16 erros** durante a execução das tarefas, com maior concentração nas tarefas **T2 — busca de produto** e **T5 — carrinho**, ambas com cinco erros. Esses resultados indicam pontos específicos que podem ser melhorados na interface.
+
+Em relação à satisfação e percepção de usabilidade, a média do **SUS foi de 69,0 pontos**, classificada como **Aceitável**. Entretanto, houve uma diferença significativa entre os participantes, variando de **37,5 a 95 pontos**. Isso demonstra que, embora o sistema permita a conclusão das tarefas, a experiência de uso pode ser melhorada para torná-la mais consistente entre diferentes usuários.
+
+Dessa forma, o teste indica que o sistema **atingiu as metas de sucesso e tempo**, mas ainda apresenta oportunidades de melhoria principalmente nas etapas de busca, carrinho, filtros e navegação.
