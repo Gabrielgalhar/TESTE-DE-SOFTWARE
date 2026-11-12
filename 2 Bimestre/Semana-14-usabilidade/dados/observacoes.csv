@@ -1,0 +1,36 @@
+participante,tarefa,tempo_s,sucesso,erros,precisou_ajuda,observacoes
+P1,T1,7,S,0,N,
+P1,T2,16,S,0,N,
+P1,T2,29,S,1,N,Entrou no sistema e não estava logado; teve dificuldade para realizar a busca
+P1,T4,13,S,0,N,
+P1,T5,19,S,0,N,
+P1,T6,24,S,0,N,
+P1,T7,6,S,0,N,
+P2,T1,8,S,0,N,
+P2,T2,21,S,1,N,Selecionou uma sugestão diferente da que pretendia pesquisar
+P2,T3,89,S,2,N,Teve dificuldade para encontrar a ordenação por avaliação
+P2,T4,27,S,0,N,
+P2,T5,24,S,1,N,Clicou em Comprar agora antes de identificar a opção Adicionar ao carrinho
+P2,T6,31,S,0,N,
+P2,T7,15,S,1,N,Utilizou o botão voltar mais vezes do que o necessário para retornar ao início
+P3,T1,6,S,0,N,
+P3,T2,13,S,0,N,
+P3,T3,44,S,1,N,Aplicou um filtro incorreto antes de encontrar o filtro desejado
+P3,T4,23,S,0,N,Comparou três produtos abrindo em abas
+P3,T5,14,S,0,N,
+P3,T6,28,S,0,N,
+P3,T2,5,S,0,N,
+P4,T1,10,S,0,N,
+P4,T2,25,S,0,N,
+P4,T5,96,S,4,N,Teve dificuldade para confirmar se o produto havia sido adicionado ao carrinho
+P4,T4,38,S,1,N,Abriu um anúncio patrocinado por engano
+P4,T5,29,S,0,N,
+P4,T2,52,S,1,N,Teve dificuldade para identificar o produto correto entre os resultados apresentados
+P4,T7,14,S,1,N,Demorou para encontrar uma forma de retornar à página inicial
+P5,T1,8,S,0,N,
+P5,T2,17,S,0,N,
+P5,T2,58,S,2,N,Confundiu alguns resultados semelhantes antes de identificar o produto correto
+P5,T4,24,S,0,N,
+P5,T5,16,S,0,N,
+P5,T6,33,S,0,N,
+P5,T7,7,S,0,N,
