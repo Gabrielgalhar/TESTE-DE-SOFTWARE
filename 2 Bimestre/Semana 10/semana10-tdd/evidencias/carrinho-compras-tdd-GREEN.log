@@ -1,0 +1,51 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ----------------< br.edu.exemplo:carrinho-compras-tdd >-----------------
+[INFO] Building carrinho-compras-tdd 1.0-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] Loaded 24461 auto-discovered prefixes for remote repository central (prefixes-central.txt)
+[INFO] Loaded 64 auto-discovered prefixes for remote repository apache.snapshots (prefixes-apache.snapshots.txt)
+[INFO] 
+[INFO] --- clean:3.5.0:clean (default-clean) @ carrinho-compras-tdd ---
+[INFO] Deleting C:\Users\Gabriel.Galhardone\Desktop\trbaalho\Semana 10\semana10-tdd\SEMANA10\carrinho-compras-tdd\target
+[INFO] 
+[INFO] --- resources:3.5.0:resources (default-resources) @ carrinho-compras-tdd ---
+[INFO] skip non existing resourceDirectory C:\Users\Gabriel.Galhardone\Desktop\trbaalho\Semana 10\semana10-tdd\SEMANA10\carrinho-compras-tdd\src\main\resources
+[INFO] 
+[INFO] --- compiler:3.16.0:compile (default-compile) @ carrinho-compras-tdd ---
+[INFO] Recompiling the module because of changed source code.
+[INFO] Compiling 2 source files with javac [debug target 17] to target\classes
+[WARNING] location of system modules is not set in conjunction with -source 17
+  not setting the location of system modules may lead to class files that cannot run on JDK 17
+    --release 17 is recommended instead of -source 17 -target 17 because it sets the location of system modules automatically
+[INFO] 
+[INFO] --- resources:3.5.0:testResources (default-testResources) @ carrinho-compras-tdd ---
+[INFO] skip non existing resourceDirectory C:\Users\Gabriel.Galhardone\Desktop\trbaalho\Semana 10\semana10-tdd\SEMANA10\carrinho-compras-tdd\src\test\resources
+[INFO] 
+[INFO] --- compiler:3.16.0:testCompile (default-testCompile) @ carrinho-compras-tdd ---
+[INFO] Recompiling the module because of changed dependency.
+[INFO] Compiling 1 source file with javac [debug target 17] to target\test-classes
+[WARNING] location of system modules is not set in conjunction with -source 17
+  not setting the location of system modules may lead to class files that cannot run on JDK 17
+    --release 17 is recommended instead of -source 17 -target 17 because it sets the location of system modules automatically
+[INFO] 
+[INFO] --- surefire:3.5.2:test (default-test) @ carrinho-compras-tdd ---
+[INFO] Using auto detected provider org.apache.maven.surefire.junitplatform.JUnitPlatformProvider
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running br.edu.exemplo.CarrinhoTest
+[INFO] Tests run: 10, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.070 s -- in br.edu.exemplo.CarrinhoTest
+[INFO] 
+[INFO] Results:
+[INFO] 
+[INFO] Tests run: 10, Failures: 0, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  5.588 s
+[INFO] Finished at: 2026-11-12T09:18:51-03:00
+[INFO] ------------------------------------------------------------------------
